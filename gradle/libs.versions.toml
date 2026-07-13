@@ -1,4 +1,10 @@
 [versions]
+ksp = "2.3.4"
+lifecycle_version = "2.11.0"
+arch_version = "2.2.0"
+nav_version = "2.9.8"
+coroutines = "1.11.0"
+room_version = "2.8.4"
 agp = "9.2.1"
 coreKtx = "1.19.0"
 junit = "4.13.2"
@@ -18,7 +24,23 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+room-compiler-ksp = { group = "androidx.room", name = "room-compiler", version.ref = "room_version"}
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room_version"}
+kotlin-couroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+navaigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "nav_version"}
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "nav_version"}
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle_version"}
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle_version"}
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle_version"}
+lifecycle-compiler = { group = "androidx.lifecycle", name = "lifecycle-compiler", version.ref = "lifecycle_version"}
+navigation-safe-args-gradle-plugin = { group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "nav_version"}
+
+
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
+safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "nav_version" }
 
