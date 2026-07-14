@@ -1,7 +1,8 @@
 [versions]
-ksp = "2.3.4"
+ksp = "2.1.0-1.0.29"
+kotlin = "2.1.0"
 lifecycle_version = "2.11.0"
-arch_version = "2.2.0"
+default_version = "1.0.0"
 nav_version = "2.9.8"
 coroutines = "1.11.0"
 room_version = "2.8.4"
@@ -15,6 +16,7 @@ material = "1.14.0"
 activityKtx = "1.13.0"
 constraintlayout = "2.2.1"
 fragment = "1.8.9"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,6 +45,8 @@ androidx-fragment = { group = "androidx.fragment", name = "fragment", version.re
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
 safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "nav_version" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 

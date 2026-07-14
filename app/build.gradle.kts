@@ -1,9 +1,10 @@
-import org.gradle.kotlin.dsl.implementation
+
 
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.ksp)
     alias(libs.plugins.safe.args)
+    alias(libs.plugins.kotlin.parcelize)
 
 }
 
@@ -50,7 +51,7 @@ dependencies {
     implementation(libs.material)
 
     //Kotlin symbol processing KSP not kapt for kotlin Room-Compiler
-    implementation(libs.room.compiler.ksp)
+    ksp(libs.room.compiler.ksp)
     implementation(libs.room.runtime)    //
 
     //couroutines
@@ -62,11 +63,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)    // View model
     implementation(libs.lifecycle.livedata.ktx)    // Live data
     implementation(libs.lifecycle.runtime.ktx)    //
-    implementation(libs.lifecycle.compiler)    //
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-
-
-
 }
